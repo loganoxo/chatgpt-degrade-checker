@@ -28,19 +28,19 @@ Therefore, ChatGPT often lowers the PoW difficulty for higher-risk IPs as a risk
 
 ## Detection Principle
 Based on the PoW (Proof of Work) mechanism, a hexadecimal `difficulty` value is generated. The higher the `difficulty`, the safer the IP environment. Generally, a difficulty value with more than four hexadecimal digits indicates a safe environment, which is unlikely to trigger service degradation.
-![ChatGPT-Degrade-Checker-5](ChatGPT-Degrade-Checker-5.png)
+![ChatGPT-Degrade-Checker-5](pic/ChatGPT-Degrade-Checker-5.png)
 
 ## Ready to Use
 
 1. Install the Chrome extension directly: [ChatGPT Degrade Checker Extension](https://chromewebstore.google.com/detail/chatgpt-degrade-checker/inidgeckbobnafenlmlgfbeoijiamepm?authuser=0&hl=zh-CN)
 
-![ChatGPT-Degrade-Checker-1](ChatGPT-Degrade-Checker-1.png)
+![ChatGPT-Degrade-Checker-1](pic/ChatGPT-Degrade-Checker-1.png)
 
 2. After adding it to Chrome, open ChatGPT, and you will see a notification box in the middle-right corner indicating the risk level of your IP. Clicking on the box will expand to show detailed PoW detection information.  
-![ChatGPT-Degrade-Checker-2](ChatGPT-Degrade-Checker-2.jpg)
+![ChatGPT-Degrade-Checker-2](pic/ChatGPT-Degrade-Checker-2.jpg)
 
 3. Additionally, the tool allows simple downgrade mitigation by increasing the PoW difficulty. Just click "Enable Smart Mitigation." Clicking it again will revert to the original user agent (UA).  
-![ChatGPT-Degrade-Checker-4](ChatGPT-Degrade-Checker-4.png)
+![ChatGPT-Degrade-Checker-4](pic/ChatGPT-Degrade-Checker-4.png)
 
 Every time ChatGPT initiates a PoW calculation request, the tool checks your IP risk level in real-time, updating the risk level and color. If you see orange or red indicators, it’s highly likely that your IP has been flagged and downgraded by ChatGPT’s risk control system.
 
@@ -51,7 +51,7 @@ Every time ChatGPT initiates a PoW calculation request, the tool checks your IP 
 1. Open Chrome and navigate to: [chrome://extensions/](chrome://extensions/)  
 2. Import the extension by selecting the `chatgpt-degrade-checker` folder.
 
-![Import Chrome Extension Locally](ChatGPT-Degrade-Checker-6.png)
+![Import Chrome Extension Locally](pic/ChatGPT-Degrade-Checker-6.png)
 
 ---
 
@@ -87,19 +87,19 @@ The following solutions are independent; you only need to use one of them:
 
 ## 检测原理
 根据PoW（Proof of Work）的机制，会生成一个16进制的difficulty。difficulty数值越大，IP环境就越安全。正常大于4位以上的16进制，基本就不会降智了。
-![ChatGPT-Degrade-Checker-5](ChatGPT-Degrade-Checker-5.png)
+![ChatGPT-Degrade-Checker-5](pic/ChatGPT-Degrade-Checker-5.png)
 
 ## 开箱即用
 
 1. 直接安装Chrome扩展程序：[ChatGPT Degrade Checker扩展程序](https://chromewebstore.google.com/detail/chatgpt-degrade-checker/inidgeckbobnafenlmlgfbeoijiamepm?authuser=0&hl=zh-CN)
 
-![ChatGPT-Degrade-Checker-1](ChatGPT-Degrade-Checker-1.png)
+![ChatGPT-Degrade-Checker-1](pic/ChatGPT-Degrade-Checker-1.png)
 
 2. 添加至Chrome之后，打开ChatGPT就可以看到右侧中间有个提示框，会提示当前你的ip风险情况。 当你点击提示框之后，就会展开检测的pow信息。
-![ChatGPT-Degrade-Checker-2](ChatGPT-Degrade-Checker-2.jpg)
+![ChatGPT-Degrade-Checker-2](pic/ChatGPT-Degrade-Checker-2.jpg)
 
 3. 同时，可以通过该检测工具进行简单的解除降级，进行提高pow的难度。点击开启智能解除降智就行，重新点击已开启的话，就会恢复原来的ua。
-![ChatGPT-Degrade-Checker-4](ChatGPT-Degrade-Checker-4.png)
+![ChatGPT-Degrade-Checker-4](pic/ChatGPT-Degrade-Checker-4.png)
 
 只要每次chatgpt发起了pow计算的请求时，就会实时的检查你的IP风险情况，改变风险等级和颜色。当你见到橙色和红色时，大概率就是已经被ChatGPT风控降级了。
 
@@ -109,7 +109,7 @@ The following solutions are independent; you only need to use one of them:
 1. 打开Chrome浏览器，输入：[chrome://extensions/](chrome://extensions/)
 2. 导入扩展程序，选择 `chatgpt-degrade-checker` 文件夹即可
 
-![本地导入Chrome扩展](ChatGPT-Degrade-Checker-6.png)
+![本地导入Chrome扩展](pic/ChatGPT-Degrade-Checker-6.png)
 
 ## GPT4降智了怎么解决？
 下面每个解决方式均独立，使用其中一种即可。
