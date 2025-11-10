@@ -336,41 +336,12 @@
 		}</span>`;
 		const userTypeText = document.createElement("div");
 		userTypeText.innerHTML = `用户类型: <span>${userType || "未知"}</span>`;
-		const contactInfo = document.createElement("div");
-		contactInfo.style.marginTop = "0px";
-		contactInfo.style.borderTop = "1px solid #ddd";
-		contactInfo.style.paddingTop = "8px";
-		contactInfo.style.fontSize = "12px";
-		contactInfo.style.color = "#555";
-		contactInfo.innerHTML = `
-		<div style="display: flex; gap: 12px; justify-content: center;">
-			<a href="#"
-			target="_blank"
-			style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; font-size: 11px; color: #fff; background-color: #2563eb; border: none; border-radius: 6px; text-decoration: none; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);"
-			onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(37, 99, 235, 0.3)';"
-			onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(37, 99, 235, 0.2)';">
-				GPT 升级教程
-			</a>
-			<a href="#"
-			target="_blank"
-			style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; font-size: 11px; color: #fff; background-color: #2563eb; border: none; border-radius: 6px; text-decoration: none; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);"
-			onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(37, 99, 235, 0.3)';"
-			onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(37, 99, 235, 0.2)';">
-				<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					<path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-				</svg>
-				联系作者
-			</a>
-		</div>`;
-
 
 		content.appendChild(difficultyText);
 		content.appendChild(riskLevelText);
 		content.appendChild(userTypeText);
 		content.appendChild(ChatGPTStatusText); // 添加服务状态监控
 		// content.appendChild(unlockFeature); // 功能描述按钮组, 下线
-		content.appendChild(contactInfo);
 
 		details.appendChild(summary);
 		details.appendChild(content);
