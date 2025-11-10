@@ -71,7 +71,7 @@
 			}
 		}
 	};
-	
+
 	// 工具函数
 	const createTooltipArrow = () => `
 		<div style="
@@ -86,32 +86,32 @@
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		"></div>
 	`;
-	
+
 	// 创建按钮的工厂函数
 	function createButton({ text, icon = '', tooltipContent = '', width = "200px" }) {
 		const button = document.createElement("button");
 		button.innerHTML = icon + text;
 		Object.assign(button.style, STYLES.button.base);
-	
+
 		const tooltip = document.createElement("div");
 		Object.assign(tooltip.style, STYLES.tooltip.base, { width });
 		tooltip.innerHTML = createTooltipArrow() + tooltipContent;
-		
+
 		// 添加交互事件
 		button.addEventListener("mouseenter", () => {
 			Object.assign(button.style, STYLES.button.hover);
 			Object.assign(tooltip.style, STYLES.tooltip.visible);
 		});
-	
+
 		button.addEventListener("mouseleave", () => {
 			Object.assign(button.style, STYLES.button.default);
 			Object.assign(tooltip.style, STYLES.tooltip.hidden);
 		});
-	
+
 		button.appendChild(tooltip);
 		return button;
 	}
-	
+
 	// 按钮配置
 	const BUTTONS_CONFIG = {
 		unlock: {
@@ -123,7 +123,7 @@
 				<div style="margin-bottom: 4px;">2. 切换到较为稳定的IP</div>
 				<div style="margin-bottom: 4px;">3. 使用 Mac 桌面版本</div>
 				<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-					<a href="https://upchatgpt.cn" target="_blank" style="color: #60a5fa; text-decoration: none;">
+					<a href="#" target="_blank" style="color: #60a5fa; text-decoration: none;">
 					查看更多解决方案 →
 					</a>
 				</div>
@@ -135,7 +135,7 @@
 			text: "状态监控介绍",
 			icon: `
 				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" 
+				<path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
 				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 			`,
@@ -147,12 +147,12 @@
 			width: "200px"
 		}
 	};
-	
+
 	// 创建按钮组
 	function createButtonGroup(unlockFeature) {
 		const toggleSwitch = createButton(BUTTONS_CONFIG.unlock);
 		const gptMonitorTipButton = createButton(BUTTONS_CONFIG.monitor);
-	
+
 		unlockFeature.style.gap = "8px";
 		unlockFeature.appendChild(toggleSwitch);
 		unlockFeature.appendChild(gptMonitorTipButton);
@@ -344,15 +344,15 @@
 		contactInfo.style.color = "#555";
 		contactInfo.innerHTML = `
 		<div style="display: flex; gap: 12px; justify-content: center;">
-			<a href="https://upchatgpt.cn/how-pay-upgrade-chatgpt-in-openai/" 
-			target="_blank" 
+			<a href="#"
+			target="_blank"
 			style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; font-size: 11px; color: #fff; background-color: #2563eb; border: none; border-radius: 6px; text-decoration: none; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);"
 			onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(37, 99, 235, 0.3)';"
 			onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(37, 99, 235, 0.2)';">
 				GPT 升级教程
 			</a>
-			<a href="https://upchatgpt.cn/img/qrcode-gzh.png" 
-			target="_blank" 
+			<a href="#"
+			target="_blank"
 			style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; font-size: 11px; color: #fff; background-color: #2563eb; border: none; border-radius: 6px; text-decoration: none; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);"
 			onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(37, 99, 235, 0.3)';"
 			onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(37, 99, 235, 0.2)';">
@@ -363,7 +363,7 @@
 				联系作者
 			</a>
 		</div>`;
-	
+
 
 		content.appendChild(difficultyText);
 		content.appendChild(riskLevelText);
@@ -578,7 +578,7 @@
 				// 当最近的问题被解决了，且时间大于3天之后，则不再显示
 				if (processStatus === "resolved" && resolvedTimeIsGreaterThan3Days(resolved_at)) {
 					return;
-				} 
+				}
 				accordion.setGPTStatus({
 					gpt_indicator: indicator,
 					gpt_description: description,
@@ -586,7 +586,7 @@
 					gpt_process_status: processStatus,
 					gpt_create_at: transformPacificTime(created_at),
 				});
-				
+
 			}
 		} catch (error) {
 			console.log("Error fetching incidents:", error);
@@ -597,5 +597,5 @@
 	setTimeout(() => {
 		fetchChatGPTByIncidents();
 	}, 3e3);
-	
+
 })();
